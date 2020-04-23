@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:clima/services/location.dart';
 
 const String URL =
@@ -23,7 +23,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   }
 
   Future<void> getData() async {
-    Response response = await get(URL);
+    http.Response response = await http.get(URL);
     if (response.statusCode == 200) {
       String data = response.body;
     } else {
