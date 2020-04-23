@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'package:clima/services/location.dart';
 
 const String URL =
@@ -26,6 +27,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     http.Response response = await http.get(URL);
     if (response.statusCode == 200) {
       String data = response.body;
+      var decodedData = jsonDecode(data);
     } else {
       print(response.statusCode);
     }
