@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:clima/services/location.dart';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -10,6 +11,11 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     super.initState();
     getLocation();
+  }
+
+  void getLocation() async {
+    Location location = Location();
+    await location.getCurrentLocation();
   }
 
   @override
