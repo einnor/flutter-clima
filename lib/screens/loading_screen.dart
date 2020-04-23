@@ -24,6 +24,11 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   Future<void> getData() async {
     Response response = await get(URL);
+    if (response.statusCode == 200) {
+      String data = response.body;
+    } else {
+      print(response.statusCode);
+    }
   }
 
   @override
