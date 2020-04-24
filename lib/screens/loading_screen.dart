@@ -31,9 +31,6 @@ class _LoadingScreenState extends State<LoadingScreen> {
         'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey';
     NetworkHelper networkHelper = NetworkHelper(url: url);
     var weatherData = await networkHelper.getData();
-//    double temperature = weatherData['main']['temp'];
-//    int condition = weatherData['weather'][0]['id'];
-//    String cityName = weatherData['name'];
 
     Navigator.push(
       context,
