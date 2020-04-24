@@ -26,7 +26,7 @@ class _LocationScreenState extends State<LocationScreen> {
 
   void updateUI(dynamic weatherData) {
     setState(() {
-      double temp = weatherData['main']['temp'];
+      var temp = weatherData['main']['temp'];
       temperature = temp.toInt();
       int condition = weatherData['weather'][0]['id'];
       weatherIcon = weather.getWeatherIcon(condition);
