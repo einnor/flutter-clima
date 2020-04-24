@@ -4,7 +4,7 @@ import 'package:clima/services/location.dart';
 import 'package:clima/services/networking.dart';
 import 'package:clima/screens/location_screen.dart';
 
-const String apiKey = '439d4b804bc8187953eb36d2a8c26a02';
+const String apiKey = '3f96f9623926709407a2d08782719415';
 
 class LoadingScreen extends StatefulWidget {
   @override
@@ -31,6 +31,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
         'https://api.openweathermap.org/data/2.5/weather?lat=$latitude&lon=$longitude&appid=$apiKey&units=metric';
     NetworkHelper networkHelper = NetworkHelper(url: url);
     var weatherData = await networkHelper.getData();
+    print('Get data');
+    print(weatherData);
 
     Navigator.push(
       context,
