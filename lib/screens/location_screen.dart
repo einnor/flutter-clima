@@ -80,6 +80,7 @@ class _LocationScreenState extends State<LocationScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => CityScreen()));
+                      if (typedName != null) {}
                     },
                     child: Icon(
                       Icons.location_city,
