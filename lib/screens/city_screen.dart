@@ -34,6 +34,9 @@ class _CityScreenState extends State<CityScreen> {
               Container(
                 padding: EdgeInsets.all(20.0),
                 child: TextField(
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
@@ -49,6 +52,7 @@ class _CityScreenState extends State<CityScreen> {
                       borderRadius: BorderRadius.all(
                         Radius.circular(10.0),
                       ),
+                      borderSide: BorderSide.none,
                     ),
                   ),
                 ),
